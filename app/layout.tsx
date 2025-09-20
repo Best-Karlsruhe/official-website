@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import NavBar from "@/lib/NavBar";
 
@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   description: "BEST Karlsruhe",
 };
 
+export const viewport: Viewport = {
+  initialScale: 1,
+  width: "device-width",
+  viewportFit: "cover"
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,9 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="viewport-fit=cover" />
-      </head>
       <body>
         <NavBar />
         {children}

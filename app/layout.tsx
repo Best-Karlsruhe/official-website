@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="p-[env(safe-area-inset)]">
-      <body className="p-0 m-0">
+    <html lang="en">
+      <body>
         <NavBar />
         {children}
       </body>

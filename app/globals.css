@@ -59,3 +59,15 @@
     background-position: center;
   }
 }
+
+@supports ( -webkit-touch-callout : none) {
+.selector {
+background-attachment:scroll
+}
+}
+
+@supports not ( -webkit-touch-callout : none) {
+.selector {
+background-attachment: fixed;
+}
+}
